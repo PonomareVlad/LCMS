@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vc dev --listen 80",
     "dev-watch": "servor --reload & vc dev --listen 80",
-    "vercel-build": "node ./api/_build.mjs"
+    "vercel-build": "node ./src/build.mjs"
   },
   "dependencies": {
     "@svalit/simple-counter": "^0.0.1",
