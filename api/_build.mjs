@@ -8,7 +8,7 @@ import '../components/app-page.mjs'
 
 const RenderPageThread = RenderPage(RenderThread)
 
-const dev = process.env.VERCEL_ENV === 'development', publicDir = new URL('./', import.meta.url), options = {
+const dev = process.env.VERCEL_ENV === 'development', publicDir = new URL('../public/', import.meta.url), options = {
     dev,
     shim: true,
     importMapOptions: {
