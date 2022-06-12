@@ -36,3 +36,4 @@ const result = await render({
 })
 
 console.debug('Complete build', result.length, 'routes')
+process.exit()
