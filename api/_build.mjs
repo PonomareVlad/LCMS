@@ -1,7 +1,7 @@
+import {readFileSync, mkdirSync} from "fs"
 import render from "svalit/prerender.mjs"
 import RenderPage from "../src/index.mjs"
 import RenderThread from "svalit"
-import {readFileSync} from "fs"
 import {html} from "lit"
 
 import '../components/app-page.mjs'
@@ -29,6 +29,8 @@ const dev = process.env.VERCEL_ENV === 'development', publicDir = new URL('../pu
     <app-page url="${url}" .setMeta="${setMeta}"></app-page>`
 
 console.debug('Building to path ', publicDir.href)
+
+mkdirSync(publicDir, {recursive: true})
 
 const result = await render({
     renderOptions: {...options, meta: {title: 'LCMS'}},
