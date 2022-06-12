@@ -1,8 +1,8 @@
-import {template, options} from "./template.mjs"
-import {mkdirSync, writeFileSync} from "fs"
-import render from "svalit/prerender.mjs"
-import RenderPage from "./index.mjs"
 import RenderThread from "svalit"
+import RenderPage from "./index.mjs"
+import render from "svalit/prerender.mjs"
+import {mkdirSync, writeFileSync} from "fs"
+import {template, options} from "./template.mjs"
 
 import '../components/app-page.mjs'
 

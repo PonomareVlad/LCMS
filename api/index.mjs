@@ -1,7 +1,7 @@
-import {template, options} from "../src/template.mjs"
-import {errorHandler} from "#lib/errorHandler.mjs"
-import RenderStream from "@svalit/vercel"
 import RenderPage from "../src/index.mjs"
+import RenderStream from "@svalit/vercel"
+import {errorHandler} from "#lib/errorHandler.mjs"
+import {template, options} from "../src/template.mjs"
 
 const RenderPageStream = RenderPage(RenderStream)
 
