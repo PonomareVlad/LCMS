@@ -8,7 +8,7 @@ import '../components/app-page.mjs'
 
 const RenderPageThread = RenderPage(RenderThread)
 
-const dev = process.env.VERCEL_ENV === 'development', options = {
+const dev = process.env.VERCEL_ENV === 'development', publicDir = new URL('./', import.meta.url), options = {
     dev,
     shim: true,
     importMapOptions: {
@@ -28,10 +28,12 @@ const dev = process.env.VERCEL_ENV === 'development', options = {
 }, template = ({meta: {url, setMeta}}) => html`
     <app-page url="${url}" .setMeta="${setMeta}"></app-page>`
 
+console.debug('Building to path ', publicDir.href)
+
 const result = await render({
     renderOptions: {...options, meta: {title: 'LCMS'}},
-    publicDir: new URL('../.vercel/output/static/', import.meta.url),
     renderClass: RenderPageThread,
+    publicDir,
     template
 })
 
