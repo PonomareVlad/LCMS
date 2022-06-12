@@ -30,7 +30,7 @@ const dev = process.env.VERCEL_ENV === 'development', options = {
 
 const result = await render({
     renderOptions: {...options, meta: {title: 'LCMS'}},
-    publicDir: new URL('../', import.meta.url),
+    publicDir: new URL('../.vercel/output/static/', import.meta.url),
     renderClass: RenderPageThread,
     template
 })
