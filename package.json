@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@svalit/simple-counter": "^0.0.1",
+    "@svalit/vercel": "^0.1.0-alpha.1",
     "bson-objectid": "^2.0.3",
     "clean-stack": "^4.2.0",
     "fetched-list": "^0.0.5",
@@ -17,7 +18,7 @@
     "mongodb": "^4.7.0",
     "serialize-error": "^11.0.0",
     "string.prototype.replaceall": "^1.0.6",
-    "svalit": "^0.1.0-alpha.7"
+    "svalit": "^0.1.0-alpha.8"
   },
   "devDependencies": {
     "servor": "^4.0.2"

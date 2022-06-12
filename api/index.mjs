@@ -1,9 +1,12 @@
 import {errorHandler} from "#lib/errorHandler.mjs"
+import RenderStream from "@svalit/vercel"
 import RenderPage from "../src/index.mjs"
-import {readFileSync} from "fs";
+import {readFileSync} from "fs"
 import {html} from "lit"
 
 import '../components/app-page.mjs'
+
+const RenderPageStream = RenderPage(RenderStream)
 
 const dev = process.env.VERCEL_ENV === 'development', options = {
     dev,
@@ -24,13 +27,12 @@ const dev = process.env.VERCEL_ENV === 'development', options = {
     content: {head: readFileSync(new URL('../includes/head.html', import.meta.url))}
 }
 
-export default async (req, res) => {
+export default (req, res) => {
     try {
         const url = `${req.headers['x-forwarded-proto'].split(',').shift()}://${req.headers['x-forwarded-host']}${req.url}`
-        const page = new RenderPage({...options, req, res, meta: {title: 'LCMS', url}})
-        const output = await page.renderTemplate(({meta: {url, setMeta}}) => html`
+        const page = new RenderPageStream({...options, req, res, meta: {title: 'LCMS', url}})
+        return page.renderTemplate(({meta: {url, setMeta}}) => html`
             <app-page url="${url}" .setMeta="${setMeta}"></app-page>`)
-        res.send(output)
     } catch (e) {
         return errorHandler(e, res)
     }
