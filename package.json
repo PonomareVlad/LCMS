@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@svalit/router": "^0.1.0-alpha.4",
-    "@svalit/simple-counter": "^0.0.1",
+    "@svalit/simple-counter": "^0.0.2",
     "@svalit/vercel": "^0.1.0-alpha.3",
     "bson-objectid": "^2.0.3",
     "clean-stack": "^5.0.0",
