@@ -50,8 +50,5 @@
     "#lib/*": "./lib/*",
     "#db": "./lib/db/server.mjs",
     "#utils": "./lib/utils.mjs"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }
