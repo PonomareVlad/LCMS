@@ -1,12 +1,12 @@
 [submodule "packages/svalit"]
 	path = packages/svalit
-	url = https://github.com/SvaLit/Svalit
+	url = https://github.com/SvaLit/Svalit.git
 [submodule "packages/vercel"]
 	path = packages/vercel
-	url = https://github.com/SvaLit/Vercel
+	url = https://github.com/SvaLit/Vercel.git
 [submodule "packages/components"]
 	path = packages/components
-	url = https://github.com/SvaLit/Components
+	url = https://github.com/SvaLit/Components.git
 [submodule "packages/router"]
 	path = packages/router
-	url = https://github.com/SvaLit/Router
+	url = https://github.com/SvaLit/Router.git
