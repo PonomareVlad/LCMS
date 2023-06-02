@@ -22,7 +22,7 @@
     "mongodb": "legacy",
     "serialize-error": "^11.0.0",
     "string.prototype.replaceall": "^1.0.7",
-    "urlpattern-polyfill": "^7.0.0"
+    "urlpattern-polyfill": "^9.0.0"
   },
   "devDependencies": {
     "servor": "^4.0.2"
