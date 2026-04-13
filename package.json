@@ -20,7 +20,7 @@
     "lit": "npm:@lit-async/lit@2.4.1-mirror.4",
     "lit-element": "npm:@lit-async/lit-element@3.2.2-mirror.4",
     "mongodb": "legacy",
-    "serialize-error": "^11.0.0",
+    "serialize-error": "^13.0.1",
     "string.prototype.replaceall": "^1.0.7",
     "urlpattern-polyfill": "^9.0.0"
   },
