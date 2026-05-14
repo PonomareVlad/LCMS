@@ -6,7 +6,7 @@
   "main": "index.mjs",
   "customElements": "custom-elements.json",
   "dependencies": {
-    "lit": "^2.4.1"
+    "lit": "^3.3.3"
   },
   "author": "PonomareVlad",
   "license": "MIT",
